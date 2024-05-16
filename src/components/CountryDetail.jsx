@@ -64,7 +64,7 @@ export default function CountryDetail() {
       .catch(() => {
         setNotFound(true);
       });
-  }, [countryName]);
+  }, [countryName, state]);
 
   if (notFound) {
     return <h1>Country Not Found</h1>;
@@ -75,7 +75,7 @@ export default function CountryDetail() {
         <span className="back-button" onClick={() => window.history.back()}>
           <i className="fa-solid fa-arrow-left"></i>&nbsp; Back
         </span>
-        {countryData == null ? (
+        {countryData === null ? (
           <CountryCardShimmer />
         ) : (
           <div className="country-details">
@@ -121,7 +121,7 @@ export default function CountryDetail() {
                   <span className="languages"></span>
                 </p>
               </div>
-              {countryData.borders.length == 0 ? (
+              {countryData.borders.length === 0 ? (
                 ""
               ) : (
                 <div className="border-countries">

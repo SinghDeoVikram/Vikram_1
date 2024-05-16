@@ -1,10 +1,8 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { useTheme } from "../hooks/useTheme";
-//import { ThemeContext } from "../contexts/ThemeContext";
 
 export default function Header() {
-  //const [isDark, setIsDark] = useContext(ThemeContext);
   const [isDark, setIsDark] = useTheme();
   return (
     <div>

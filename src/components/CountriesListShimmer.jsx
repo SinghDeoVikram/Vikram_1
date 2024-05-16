@@ -2,9 +2,6 @@ import React from "react";
 import "./CountriesListShimmer.css";
 
 export default function CountriesListShimmer() {
-  // const mapped = Array.from({ length: 20 }).map((ele, i) => {
-  //   return <div key={i} className="country-card shimmer-card"></div>;
-  // });
 
   return (
     <div className="countries-container">

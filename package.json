@@ -22,7 +22,12 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "rules": {
+      "jsx-a11y/heading-has-content": "off",
+      "react-hooks/exhaustive-deps": "warn",
+      "eqeqeq": "warn"
+    }
   },
   "browserslist": {
     "production": [

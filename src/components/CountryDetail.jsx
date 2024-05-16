@@ -3,11 +3,8 @@ import "./CountryDetail.css";
 import { Link, useLocation, useParams } from "react-router-dom";
 import CountryCardShimmer from "./CountryCardShimmer";
 import { useTheme } from "../hooks/useTheme";
-//import { ThemeContext } from "../contexts/ThemeContext";
 
 export default function CountryDetail() {
-  //const [isDark] = useOutletContext();
-  //const [isDark] = useContext(ThemeContext);
   const Params = useParams();
   const countryName = Params.Country;
   const [countryData, setCountryData] = useState(null);
@@ -78,7 +75,7 @@ export default function CountryDetail() {
         <span className="back-button" onClick={() => window.history.back()}>
           <i className="fa-solid fa-arrow-left"></i>&nbsp; Back
         </span>
-        {countryData === null ? (
+        {countryData == null ? (
           <CountryCardShimmer />
         ) : (
           <div className="country-details">
